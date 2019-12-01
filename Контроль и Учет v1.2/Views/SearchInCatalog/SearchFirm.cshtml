@@ -1,0 +1,96 @@
+﻿@model IEnumerable<Контроль_и_Учет_v1._2.DB_ModelContext.Firms>
+
+@{
+    ViewBag.Title = "SearchFirm";
+}
+
+
+<h2>Поиск фирмы в каталоге:</h2>
+<hr />
+
+@using (Html.BeginForm())
+{
+
+    @Html.AntiForgeryToken()
+
+
+    <label>Введите название фирмы </label>
+
+    <form>
+        <div class="form-row">
+            <div class="col">
+                <div class="form-group">
+                    <label class="sr-only" for="Название фирмы">Название фирмы</label>
+                    <input id="titleFirm" class="form-control" type="text" placeholder="Название фирмы" />
+                </div>
+            </div>
+
+        </div>
+   
+    <p> </p>
+
+    <p> </p>
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input id="SearchFirm" type="button" value="Поиск" class="btn-success btn-lg" />
+        </div>
+    </div>
+
+
+    <div id="myDiv"></div>
+
+    </form>
+
+    /*
+      <h2>Список фирм:</h2>
+    <table id="firmsContainer" class="table">
+        <tr>
+
+            <th>
+                Название
+            </th>
+            <th>
+                Директор
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+
+                <td>
+                    @Html.DisplayFor(modelItem => item.TitleFirm)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.IdDirector)
+                </td>
+                <td>
+                    @Html.ActionLink("Подробная информация о фирме", "Details", new { id = item.IdFirm }) |
+
+                    @Html.ActionLink("Редактировать информацию о фирме", "Edit", new { id = item.IdFirm })
+
+                </td>
+            </tr>
+        }
+
+    </table>
+
+    <button id="more" class="btn btn-success">Показать больше фирм</button>
+
+}
+
+*/
+
+}
+
+
+<div>
+    @Html.ActionLink("Вернутся назад", "Index", "Firm")
+</div>
+
+<script src="~/Scripts/MyJavaScript/SearchJS/SearchFirmJavaScript.js"></script>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

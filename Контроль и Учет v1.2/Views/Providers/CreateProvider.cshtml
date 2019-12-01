@@ -1,0 +1,289 @@
+﻿@model Контроль_и_Учет_v1._2.DB_ModelContext.Providers
+
+@{
+
+    ViewBag.Title = "CreateProvider";
+}
+
+<script src="~/Scripts/MyJavaScript/CreateProviderJavaScript.js"></script>
+
+<h2>Добавить поставщика:</h2>
+<hr />
+
+@using (Html.BeginForm())
+{
+
+    @Html.AntiForgeryToken()
+
+
+    <form>
+        <div class="form-row">
+            <div class="col">
+                <div class="form-group">
+                    <label class="sr-only" for="Название фирмы поставщика">Название фирмы поставщика</label>
+                    <input id="FirmTitle" class="form-control" type="text" placeholder="Название фирмы поставщика" pattern="[А-Я]{3,4}[А-Яа-яёЁ0-9 _\.\-]{3,60}" required title="Строка должна начинатся с ООО, ФЛП и т.д. длина строки не менее 5 символов, разрешенны символы (_ , -)" />
+                </div>
+            </div>
+        </div>
+
+        <p> </p>
+
+        <label>Адрес поставщика №1 :</label>
+
+        <div class="form-group">
+            <select id="AddressType1" class="form-control">
+                <option value="-1">Выберите тип адреса</option>
+                @foreach (Контроль_и_Учет_v1._2.DB_ModelContext.addressTypes type in ViewBag.aType)
+                {
+                    <option value="@type.addressTypeId">
+                        @type.addressTitle
+                    </option>
+                }
+            </select>
+        </div>
+
+        <p> </p>
+
+
+        <div class="form-row">
+            <div class="col">
+                <div class="form-group">
+                    <label class="sr-only" for="Страна">Страна</label>
+                    <input id="Country1" class="form-control" type="text" placeholder="Страна" pattern="[А-Я]{1,1}[А-Яа-яёЁ]{2,30}" required title="Строка должна начинатся с большой буквы длина строки не менее 3 символов" />
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="form-group">
+                    <label class="sr-only" for="Город">Город</label>
+                    <input id="City1" class="form-control" type="text" placeholder="Город" pattern="[А-Я]{1,1}[а-яё\-]{2,30}" required title="Строка должна начинатся с большой буквы длина строки не менее 3 символов" />
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="form-group">
+                    <label class="sr-only" for="Улица">Улица</label>
+                    <input id="Street1" class="form-control" type="text" placeholder="Улица" pattern="[А-Я]{1,1}[а-яё\-]{2,30}" required title="Строка должна начинатся с большой буквы длина строки не менее 3 символов" />
+                </div>
+
+            </div>
+
+            <div class="col">
+                <div class="form-group">
+                    <label class="sr-only" for="Номер дома">Номер дома</label>
+                    <input id="HouseNumber1" class="form-control" type="text" placeholder="Номер дома" pattern="[0-9]{1,4}" required title="Строка должна начинатся с цифры длина строки не более 4 символов. Разрешенные номера 0 - 9999" />
+                </div>
+            </div>
+
+
+            <div class="col">
+                <div class="form-group">
+                    <label class="sr-only" for="Номер офиса">Номер офиса</label>
+                    <input id="OfficeNumber1" class="form-control" type="text" placeholder="Номер офиса" pattern="[0-9]{,4}" required title="Строка должна начинатся с цифры длина строки не более 4 символов. Разрешенные номера 0 - 9999" />
+                </div>
+            </div>
+
+        </div>
+
+
+
+        <hr />
+
+        <label>Адрес поставщика №2 :</label>
+
+
+        <div class="form-group">
+            <select id="AddressType2" class="form-control">
+                <option value="-1">Выберите тип адреса</option>
+                @foreach (Контроль_и_Учет_v1._2.DB_ModelContext.addressTypes type in ViewBag.aType)
+                {
+                    <option value="@type.addressTypeId">
+                        @type.addressTitle
+                    </option>
+                }
+            </select>
+        </div>
+
+        <p> </p>
+
+        <div class="form-row">
+            <div class="col">
+                <div class="form-group">
+                    <label class="sr-only" for="Страна">Страна</label>
+                    <input id="Country2" class="form-control" type="text" placeholder="Страна" pattern="[А-Я]{1,1}[А-Яа-яёЁ]{2,30}" required title="Строка должна начинатся с большой буквы длина строки не менее 3 символов" />
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="form-group">
+                    <label class="sr-only" for="Город">Город</label>
+                    <input id="City2" class="form-control" type="text" placeholder="Город" required title="Строка должна начинатся с большой буквы длина строки не менее 3 символов" />
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="form-group">
+                    <label class="sr-only" for="Улица">Улица</label>
+                    <input id="Street2" class="form-control" type="text" placeholder="Улица" pattern="[А-Я]{1,1}[а-яё\-]{2,30}" required title="Строка должна начинатся с большой буквы длина строки не менее 3 символов" />
+                </div>
+
+            </div>
+
+            <div class="col">
+                <div class="form-group">
+                    <label class="sr-only" for="Номер дома">Номер дома</label>
+                    <input id="HouseNumber2" class="form-control" type="text" placeholder="Номер дома" pattern="[0-9]{1,4}" required title="Строка должна начинатся с цифры длина строки не более 4 символов. Разрешенные номера 0 - 9999" />
+                </div>
+            </div>
+
+
+            <div class="col">
+                <div class="form-group">
+                    <label class="sr-only" for="Номер офиса">Номер офиса</label>
+                    <input id="OfficeNumber2" class="form-control" type="text" placeholder="Номер офиса" pattern="[0-9]{,4}" required title="Строка должна начинатся с цифры длина строки не более 4 символов. Разрешенные номера 0 - 9999" />
+                </div>
+            </div>
+
+        </div>
+
+
+
+        <p> </p>
+
+        <hr />
+
+        <label>Адрес Склада/Магазина :</label>
+
+
+        <div class="form-group">
+            <select id="AddressType3" class="form-control">
+                <option value="-1">Выберите тип адреса</option>
+                @foreach (Контроль_и_Учет_v1._2.DB_ModelContext.addressTypes type in ViewBag.aType)
+                {
+                    <option value="@type.addressTypeId">
+                        @type.addressTitle
+                    </option>
+                }
+            </select>
+        </div>
+
+        <p> </p>
+
+        <div class="form-row">
+            <div class="col">
+                <div class="form-group">
+                    <label class="sr-only" for="Страна">Страна</label>
+                    <input id="Country3" class="form-control" type="text" placeholder="Страна" pattern="[А-Я]{1,1}[А-Яа-яёЁ]{2,30}" required title="Строка должна начинатся с большой буквы длина строки не менее 3 символов" />
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="form-group">
+                    <label class="sr-only" for="Город">Город</label>
+                    <input id="City3" class="form-control" type="text" placeholder="Город" pattern="[А-Я]{1,1}[а-яё\-]{2,30}" required title="Строка должна начинатся с большой буквы длина строки не менее 3 символов" />
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="form-group">
+                    <label class="sr-only" for="Улица">Улица</label>
+                    <input id="Street3" class="form-control" type="text" placeholder="Улица" pattern="[А-Я]{1,1}[а-яё\-]{2,30}" required title="Строка должна начинатся с большой буквы длина строки не менее 3 символов" />
+                </div>
+
+            </div>
+
+            <div class="col">
+                <div class="form-group">
+                    <label class="sr-only" for="Номер дома">Номер дома</label>
+                    <input id="HouseNumber3" class="form-control" type="text" placeholder="Номер дома" placeholder="Номер дома" pattern="[0-9]{1,4}" required title="Строка должна начинатся с цифры длина строки не более 4 символов. Разрешенные номера 0 - 9999" />
+                </div>
+            </div>
+
+
+            <div class="col">
+                <div class="form-group">
+                    <label class="sr-only" for="Номер офиса">Номер офиса</label>
+                    <input id="OfficeNumber3" class="form-control" type="text" placeholder="Номер офиса" pattern="[0-9]{,4}" required title="Строка должна начинатся с цифры длина строки не более 4 символов. Разрешенные номера 0 - 9999" />
+                </div>
+            </div>
+
+        </div>
+
+
+
+
+        <p> </p>
+
+        <hr />
+
+        <label>Директор:</label>
+
+
+        <div class="form-row">
+            <div class="col">
+                <div class="form-group">
+                    <label class="sr-only" for="Фамилия">Фамилия</label>
+                    <input id="Surname" class="form-control" type="text" placeholder="Фамилия" pattern="[А-Я]{1,1}[а-я]{1,60}" required title="Фамилия должна начинатся с большой буквы длина строки не менее 2 символов" />
+                </div>
+
+            </div>
+
+            <div class="col">
+                <div class="form-group">
+                    <label class="sr-only" for="Имя">Имя</label>
+                    <input id="Name" class="form-control" type="text" placeholder="Имя" pattern="[А-Я]{1,1}[а-я]{1,60}" required title="Имя должно начинатся с большой буквы длина строки не менее 2 символов" />
+                </div>
+            </div>
+
+
+            <div class="col">
+                <div class="form-group">
+                    <label class="sr-only" for="Отчество">Отчество</label>
+                    <input id="SecondName" class="form-control" type="text" placeholder="Отчество" pattern="[А-Я]{1,1}[а-я]{1,60}" required title="Отчество должно начинатся с большой буквы длина строки не менее 2 символов" />
+                </div>
+            </div>
+
+        </div>
+
+
+
+        <p> </p>
+
+        <hr />
+
+        <label>Выберите фирму с которой будет работать поставщик</label>
+        <div class="form-group">
+            <select id="firm" class="form-control">
+                <option value="-1">Выберите фирму</option>
+                @foreach (Контроль_и_Учет_v1._2.DB_ModelContext.Firms f in ViewBag.firms)
+                {
+                    <option value="@f.IdFirm">
+                        @f.TitleFirm
+                    </option>
+                }
+            </select>
+        </div>
+
+
+        <p> </p>
+
+   
+
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input id="CreateFirm" type="submit" value="Добавить поставщика" class="btn-success btn-lg" />
+        </div>
+    </div>
+
+    </form>
+
+
+}
+
+<div>
+    @Html.ActionLink("Вернутся назад", "Index", "Firm")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

@@ -1,0 +1,134 @@
+﻿@model Контроль_и_Учет_v1._2.DB_ModelContext.Documents
+
+@{
+
+    ViewBag.Title = "DeleteDocument";
+}
+
+
+
+<h2>Удаление документа:</h2>
+<hr />
+
+@using (Html.BeginForm())
+{
+
+    @Html.AntiForgeryToken()
+
+
+    <form>
+        <div class="form-row">
+            <div class="col">
+                <div class="form-group">
+                    <label>Выберите фирму</label>
+                    @Html.DropDownList("Firm", ViewBag.Firm as SelectList, new { name = "firm" })
+                </div>
+            </div>
+        </div>
+   
+
+    <p> </p>
+
+   
+        <div class="form-row">
+            <div class="col">
+                <div class="form-group">
+                    <label>Выберите поставщика</label>
+                    @Html.DropDownList("Provider", ViewBag.Provider as SelectList, new { name = "provider" })
+                </div>
+            </div>
+        </div>
+    
+
+    <p> </p>
+
+
+   
+        <div class="form-row">
+            <div class="col">
+                <div class="form-group">
+                    <label>Выберите договор к которому будете вносить документ</label>
+                    @Html.DropDownList("Contract", ViewBag.Contract as SelectList, new { name = "contract" })
+                </div>
+            </div>
+        </div>
+   
+
+    <p> </p>
+    <hr />
+
+    <label>Номер документа № </label>
+
+   
+        <div class="form-row">
+            <div class="col">
+                <div class="form-group">
+                    <label class="sr-only" for="№">№</label>
+                    <input id="numberDocument" class="form-control" type="text" placeholder="№" />
+                </div>
+            </div>
+
+        </div>
+    
+
+    <p> </p>
+
+
+    <label>Дата документа </label>
+    
+        <div class="form-row">
+            <div class="col">
+                <div class="form-group">
+                    <label class="sr-only" for="День">День</label>
+                    <input id="Day1" class="form-control" type="text" placeholder="День" />
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="form-group">
+                    <label class="sr-only" for="Месяц">Месяц</label>
+                    <input id="Month1" class="form-control" type="text" placeholder="Месяц" />
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="form-group">
+                    <label class="sr-only" for="Год">Год</label>
+                    <input id="Year1" class="form-control" type="text" placeholder="Год" />
+                </div>
+
+            </div>
+
+        </div>
+   
+
+    <p> </p>
+    <hr />
+
+    <p> </p>
+    <p> </p>
+
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input id="DeleteDocument" type="submit" value="Удалить документ" class="btn-success btn-lg" />
+        </div>
+    </div>
+
+
+    </form>
+
+}
+
+<div>
+    @Html.ActionLink("Вернутся назад", "Index", "Firm")
+</div>
+
+
+<script src="~/Scripts/MyJavaScript/AddAndDeleteDocument/DropDownListJavaScript.js"></script>
+
+<script src="~/Scripts/MyJavaScript/AddAndDeleteDocument/DeleteDocumentJavaScript.js"></script>
+
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

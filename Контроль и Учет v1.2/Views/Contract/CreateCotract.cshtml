@@ -1,0 +1,152 @@
+﻿@model Контроль_и_Учет_v1._2.DB_ModelContext.Contracts
+
+@{
+
+    ViewBag.Title = "CreateCotract";
+}
+
+<script src="~/Scripts/MyJavaScript/CreateCotractJavaScript.js"></script>
+
+<h2>Добавить новый договор:</h2>
+<hr />
+
+@using (Html.BeginForm())
+{
+
+    @Html.AntiForgeryToken()
+
+
+
+    <form>
+        <div class="form-row">
+            <div class="col">
+                <div class="form-group">
+                    <label class="sr-only" for="Номер договора">Номер договора</label>
+                    <input id="СontractNumber" class="form-control" type="text" placeholder="Номер договора" />
+                </div>
+            </div>
+        </div>
+    </form>
+
+    <p> </p>
+
+    <label>Дата заключения договора: </label>
+
+    <form>
+        <div class="form-row">
+            <div class="col">
+                <div class="form-group">
+                    <label class="sr-only" for="День">День</label>
+                    <input id="Day1" class="form-control" type="text" placeholder="День" />
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="form-group">
+                    <label class="sr-only" for="Месяц">Месяц</label>
+                    <input id="Month1" class="form-control" type="text" placeholder="Месяц" />
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="form-group">
+                    <label class="sr-only" for="Год">Год</label>
+                    <input id="Year1" class="form-control" type="text" placeholder="Год" />
+                </div>
+
+            </div>
+
+        </div>
+    </form>
+
+    <p> </p>
+    <hr />
+
+
+    <label>Дата окончания договора: </label>
+
+    <form>
+        <div class="form-row">
+            <div class="col">
+                <div class="form-group">
+                    <label class="sr-only" for="День">День</label>
+                    <input id="Day2" class="form-control" type="text" placeholder="День" />
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="form-group">
+                    <label class="sr-only" for="Месяц">Месяц</label>
+                    <input id="Month2" class="form-control" type="text" placeholder="Месяц" />
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="form-group">
+                    <label class="sr-only" for="Год">Год</label>
+                    <input id="Year2" class="form-control" type="text" placeholder="Год" />
+                </div>
+
+            </div>
+
+        </div>
+    </form>
+
+    <p> </p>
+    <hr />
+
+
+    <label>Условия поставки (Incoterms): </label>
+
+    <form>
+        <div class="form-row">
+            <div class="col">
+                <div class="form-group">
+                    <label class="sr-only" for="Incoterms">Incoterms</label>
+                    <input id="Incoterms" class="form-control" type="text" placeholder="Incoterms" />
+                </div>
+            </div>
+
+        </div>
+    </form>
+
+    <p> </p>
+    <hr />
+
+
+        <label>Выберите поставщика для договора:</label>
+
+        <div class="form-group">
+            <select id="firm" class="form-control">
+                <option value="-1">Выберите поставщика</option>
+                @foreach (Контроль_и_Учет_v1._2.DB_ModelContext.Providers pr in ViewBag.provider)
+            {
+                <option value="@pr.IdProvider">
+                    @pr.TitleProvider
+                </option>
+        }
+            </select>
+        </div>
+
+
+        <p> </p>
+
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input id="CreateСontract" type="submit" value="Добавить договор" class="btn-success btn-lg" />
+            </div>
+        </div>
+
+
+
+
+        }
+
+        <div>
+            @Html.ActionLink("Вернутся назад", "Index", "Firm")
+        </div>
+
+        @section Scripts {
+            @Scripts.Render("~/bundles/jqueryval")
+        }

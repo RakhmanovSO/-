@@ -1,0 +1,53 @@
+﻿@model Контроль_и_Учет_v1._2.DB_ModelContext.Firms
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>О фирме</h2>
+<h2> @Html.DisplayFor(model => model.TitleFirm)</h2>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+
+        <dt>
+            <p>Название</p>
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TitleFirm)
+        </dd>
+
+        <dt>
+            <p>Юридический адрес</p>
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IdAddressLegal)
+        </dd>
+
+        <dt>
+            <p>Физический адрес</p>
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IdAddressActual)
+        </dd>
+
+        <dt>
+            <p>Директор</p>
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IdDirector)
+        </dd>
+
+    </dl>
+</div>
+
+
+    <div>
+        @Html.ActionLink("Вернутся назад", "SearchFirm", "SearchInCatalog")
+    </div>
+

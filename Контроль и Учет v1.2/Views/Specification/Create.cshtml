@@ -1,0 +1,150 @@
+﻿@model Контроль_и_Учет_v1._2.DB_ModelContext.Documents
+
+@{
+
+    ViewBag.Title = "CreateSpecification";
+}
+
+<link href="~/Content/MyStyleTableCSS/StyleTableCSS.css" rel="stylesheet" />
+
+<h2>Для составления спецификации укажите следующие данные:</h2>
+<hr />
+
+@using (Html.BeginForm("NewSpecification", "Specification", FormMethod.Get))
+{
+
+    @Html.AntiForgeryToken()
+
+
+    <form>
+        <div class="form-row">
+            <div class="col">
+                <div class="form-group">
+                    <label>Выберите фирму</label>
+                    @Html.DropDownList("Firm", ViewBag.Firm as SelectList, new { name = "firm" })
+                </div>
+            </div>
+        </div>
+
+
+        <p> </p>
+
+
+        <div class="form-row">
+            <div class="col">
+                <div class="form-group">
+                    <label>Выберите поставщика</label>
+                    @Html.DropDownList("Provider", ViewBag.Provider as SelectList, new { name = "provider" })
+                </div>
+            </div>
+        </div>
+
+
+        <p> </p>
+
+
+
+        <div class="form-row">
+            <div class="col">
+                <div class="form-group">
+                    <label>Выберите договор к которому будете вносить документ</label>
+                    @Html.DropDownList("Contract", ViewBag.Contract as SelectList, new { name = "contract" })
+                </div>
+            </div>
+        </div>
+
+
+        <p> </p>
+        <hr />
+
+        <label>Введите период за который хотите составить спецификацию </label>
+
+
+        <p>От данной даты </p>
+
+
+        <div class="form-row">
+            <div class="col">
+                <div class="form-group">
+                    <label class="sr-only" for="День">День</label>
+                    <input name="Day1" class="form-control" type="text" placeholder="День" pattern="[0-2]\d|3[01]" required title="Разрешенный формат дня от 01 до 31" />
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="form-group">
+                    <label class="sr-only" for="Месяц">Месяц</label>
+                    <input name="Month1" class="form-control" type="text" placeholder="Месяц" pattern="0\d|1[012]" required title="Разрешенный формат месяца от 01 до 12" />
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="form-group">
+                    <label class="sr-only" for="Год">Год</label>
+                    <input name="Year1" class="form-control" type="text" placeholder="Год" pattern="\d{4}" required title="Разрешенны формат года  2005 и т.д." />
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <p> </p>
+
+
+        <p>До данной даты</p>
+
+
+        <div class="form-row">
+            <div class="col">
+                <div class="form-group">
+                    <label class="sr-only" for="День">День</label>
+                    <input name="Day2" class="form-control" type="text" placeholder="День" pattern="[0-2]\d|3[01]" required title="Разрешенный формат дня от 01 до 31" />
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="form-group">
+                    <label class="sr-only" for="Месяц">Месяц</label>
+                    <input name="Month2" class="form-control" type="text" placeholder="Месяц" pattern="0\d|1[012]" required title="Разрешенный формат месяца от 01 до 12" />
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="form-group">
+                    <label class="sr-only" for="Год">Год</label>
+                    <input name="Year2" class="form-control" type="text" placeholder="Год" pattern="\d{4}" required title="Разрешенны формат года  2005 и т.д." />
+                </div>
+
+            </div>
+
+        </div>
+
+        <p> </p>
+        <p> </p>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input id="CreateSpecification" type="submit" value="Составить Спецификацию" class="btn-success btn-lg" />
+            </div>
+        </div>
+
+    </form>
+
+
+    <div id="divMyTable"> </div>
+
+    <script src="~/Scripts/MyJavaScript/AddSpecification/DropDownListJavaScript.js"></script>
+
+    <script src="~/Scripts/MyJavaScript/AddSpecification/CreateSpecificationJavaScript.js"></script>
+
+
+}
+
+<div>
+    @Html.ActionLink("Вернутся назад", "Index", "Firm")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

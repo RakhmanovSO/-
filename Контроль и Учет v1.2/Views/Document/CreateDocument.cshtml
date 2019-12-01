@@ -1,0 +1,210 @@
+﻿@model Контроль_и_Учет_v1._2.DB_ModelContext.Documents
+
+@{
+
+    ViewBag.Title = "CreateDocument";
+}
+
+
+<h2>Добавить новый документ:</h2>
+<hr />
+
+@using (Html.BeginForm())
+{
+
+    @Html.AntiForgeryToken()
+
+
+
+<form>
+    <div class="form-row">
+        <div class="col">
+            <div class="form-group">
+                <label>Выберите фирму</label>
+                @Html.DropDownList("Firm", ViewBag.Firm as SelectList, new { name = "firm" })
+            </div>
+        </div>
+    </div>
+
+
+    <p> </p>
+
+
+    <div class="form-row">
+        <div class="col">
+            <div class="form-group">
+                <label>Выберите поставщика</label>
+                @Html.DropDownList("Provider", ViewBag.Provider as SelectList, new { name = "provider" })
+            </div>
+        </div>
+    </div>
+
+
+    <p> </p>
+
+
+
+    <div class="form-row">
+        <div class="col">
+            <div class="form-group">
+                <label>Выберите договор к которому будете вносить документ</label>
+                @Html.DropDownList("Contract", ViewBag.Contract as SelectList, new { name = "contract" })
+            </div>
+        </div>
+    </div>
+
+
+    <p> </p>
+    <hr />
+
+    <label>Номер документа № </label>
+
+
+    <div class="form-row">
+        <div class="col">
+            <div class="form-group">
+                <label class="sr-only" for="№">№</label>
+                <input id="numberDocument" class="form-control" type="text" placeholder="№" />
+            </div>
+        </div>
+
+    </div>
+
+
+    <p> </p>
+
+
+    <label>Дата документа </label>
+
+    <div class="form-row">
+        <div class="col">
+            <div class="form-group">
+                <label class="sr-only" for="День">День</label>
+                <input id="Day1" class="form-control" type="text" placeholder="День" />
+            </div>
+        </div>
+
+        <div class="col">
+            <div class="form-group">
+                <label class="sr-only" for="Месяц">Месяц</label>
+                <input id="Month1" class="form-control" type="text" placeholder="Месяц" />
+            </div>
+        </div>
+
+        <div class="col">
+            <div class="form-group">
+                <label class="sr-only" for="Год">Год</label>
+                <input id="Year1" class="form-control" type="text" placeholder="Год" />
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <p> </p>
+    <hr />
+
+    <label>НДС в % </label>
+
+
+    <div class="form-row">
+        <div class="col">
+            <div class="form-group">
+                <label class="sr-only" for="НДС">НДС</label>
+                <input id="nds" class="form-control" type="text" placeholder="НДС" />
+            </div>
+        </div>
+
+    </div>
+
+
+    <p> </p>
+
+    <hr />
+
+    <label>Наименование документа</label>
+
+    <div id="container2" class="container2">
+
+        <div class="form-row">
+            <div class="col">
+                <div class="form-group">
+                    <label class="sr-only" for="Наименование">Наименование товара/услуги</label>
+                    <input id="name" class="form-control" type="text" placeholder="Наименование товара/услуги" />
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="form-group">
+                    <label class="sr-only" for="Ед. измерения">Ед. измерения</label>
+                    <input id="unitMeasurements" class="form-control" type="text" placeholder="Ед. измерения" />
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="form-group">
+                    <label class="sr-only" for="Кол-во">Кол-во</label>
+                    <input id="amount" class="form-control" type="text" placeholder="Кол-во" />
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="form-group">
+                    <label class="sr-only" for="Цена без НДС">Цена без НДС</label>
+                    <input id="price" class="form-control" type="text" placeholder="Цена без НДС" />
+                </div>
+
+            </div>
+
+            <div class="col">
+                <div class="form-group">
+                    <label class="sr-only" for="Сумма без НДС">Сумма без НДС</label>
+                    <input id="summ" class="form-control" type="text" placeholder="Сумма без НДС" />
+                </div>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+    <p> </p>
+
+</form>
+
+    <div>
+        <button id="AddForm">Добавить строку</button>
+    </div>
+
+    <p> </p>
+    <p> </p>
+
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input id="CreateDocument" type="button" value="Добавить документ" class="btn-success btn-lg" />
+        </div>
+    </div>
+
+
+
+
+    <script src="~/Scripts/MyJavaScript/AddAndDeleteDocument/DropDownListJavaScript.js"></script>
+
+    <script src="~/Scripts/MyJavaScript/AddAndDeleteDocument/AddFormJavaScript.js"></script>
+
+    <script src="~/Scripts/MyJavaScript/AddAndDeleteDocument/CreateDocumentJavaScript.js"></script>
+
+
+
+
+}
+
+<div>
+    @Html.ActionLink("Вернутся назад", "Index", "Firm")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

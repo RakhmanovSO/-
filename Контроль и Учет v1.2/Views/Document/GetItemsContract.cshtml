@@ -1,0 +1,17 @@
+﻿@model IEnumerable<Контроль_и_Учет_v1._2.DB_ModelContext.Contracts>
+
+<select id="Contract" name="Contract">
+
+    @foreach (var item in Model)
+    {
+
+        <option value="@item.IdContract">@item.ContractNumber</option>
+    }
+
+</select>
+
+
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

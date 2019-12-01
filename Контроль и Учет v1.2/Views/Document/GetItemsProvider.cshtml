@@ -1,0 +1,18 @@
+﻿@model IEnumerable<Контроль_и_Учет_v1._2.DB_ModelContext.Providers>
+
+<select id="Provider" name="Provider">
+
+    <option value="-1">--Выберите поставщика--</option>
+    @foreach (var item in Model)
+    {
+
+        <option value="@item.IdProvider">@item.TitleProvider</option>
+    }
+
+</select>
+
+
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

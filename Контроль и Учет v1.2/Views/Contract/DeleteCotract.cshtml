@@ -1,0 +1,66 @@
+﻿@model Контроль_и_Учет_v1._2.DB_ModelContext.Contracts
+
+@{
+     ViewBag.Title = "DeleteCotract";
+}
+
+<script src="~/Scripts/MyJavaScript/DeleteCotractJavaScript.js"></script>
+
+<h2>Удаление договора:</h2>
+<hr />
+
+@using (Html.BeginForm())
+{
+
+    @Html.AntiForgeryToken()
+
+
+
+    <form>
+        <div class="form-row">
+            <div class="col">
+                <div class="form-group">
+                    <label class="sr-only" for="Номер договора">Номер договора</label>
+                    <input id="СontractNumber" class="form-control" type="text" placeholder="Номер договора" />
+                </div>
+            </div>
+        </div>
+    </form>
+
+    <p> </p>
+
+
+
+    <form>
+        <div class="form-row">
+            <div class="col">
+                <div class="form-group">
+                    <label class="sr-only" for="Название фирмы поставщика">Название фирмы поставщика</label>
+                    <input id="ProviderTitle" class="form-control" type="text" placeholder="Название фирмы поставщика" />
+                </div>
+            </div>
+        </div>
+    </form>
+
+
+    <p> </p>
+
+
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input id="DeleteСontract" type="submit" value="Удалить договор" class="btn-success btn-lg" />
+        </div>
+    </div>
+
+
+
+
+}
+
+<div>
+    @Html.ActionLink("Вернутся назад", "Index", "Firm")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

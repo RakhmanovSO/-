@@ -1,0 +1,56 @@
+﻿@model IEnumerable<Контроль_и_Учет_v1._2.DB_ModelContext.Contracts>
+
+@{
+    ViewBag.Title = "SearchContracts";
+}
+
+
+<h2>Поиск договора в каталоге:</h2>
+<hr />
+
+@using (Html.BeginForm()) {
+
+    @Html.AntiForgeryToken()
+
+
+    <label>Введите номер договора </label>
+
+    <form>
+        <div class="form-row">
+            <div class="col">
+                <div class="form-group">
+                    <label class="sr-only" for="Номер договора №">Номер договора №</label>
+                    <input id="contractNumber" class="form-control" type="text" placeholder="Номер договора №" />
+                </div>
+            </div> 
+
+        </div>
+
+        <p> </p>
+
+        <p> </p>
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input id="SearchContract" type="button" value="Поиск" class="btn-success btn-lg" />
+            </div>
+        </div>
+
+
+        <div id="myDiv"></div>
+
+    </form>
+
+   
+
+}
+
+
+<div>
+    @Html.ActionLink("Вернутся назад", "Index", "Firm")
+</div>
+
+<script src="~/Scripts/MyJavaScript/SearchJS/SearchContractJavaScript.js"></script>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

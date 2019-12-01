@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="a9c2ec0619714102956b725d99f5fde9" Name="Diagram1">
+        <EntityTypeShape EntityType="DB_DocumentsModel.Addresses" Width="1.5" PointX="3.375" PointY="5.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_DocumentsModel.addressTypes" Width="1.5" PointX="1.375" PointY="6.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_DocumentsModel.Contracts" Width="1.5" PointX="9.625" PointY="2.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_DocumentsModel.Directors" Width="1.5" PointX="4.25" PointY="0.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_DocumentsModel.Documents" Width="1.5" PointX="11.75" PointY="2.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_DocumentsModel.DocumentTitle" Width="1.5" PointX="11.375" PointY="5.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_DocumentsModel.Firms" Width="1.5" PointX="0.5" PointY="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_DocumentsModel.Providers" Width="1.5" PointX="6.875" PointY="1.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_DocumentsModel.sysdiagrams" Width="1.5" PointX="5.75" PointY="9" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_DocumentsModel.User" Width="1.5" PointX="7.375" PointY="9.125" IsExpanded="true" />
+        <AssociationConnector Association="DB_DocumentsModel.FK_Addresses_addressTypes" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_DocumentsModel.FK_Firms_Addresses" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_DocumentsModel.FK_Firms_Addresses1" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_DocumentsModel.FK_Providers_Addresses" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_DocumentsModel.FK_Providers_Addresses1" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_DocumentsModel.FK_Providers_Addresses2" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_DocumentsModel.FK_Firms_Directors" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_DocumentsModel.FK_Providers_Directors" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_DocumentsModel.ContractAndDocument" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_DocumentsModel.DocumentsAndTitle" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_DocumentsModel.FirmsAndProviders" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_DocumentsModel.ProvidersAndContracts" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

@@ -1,0 +1,408 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Хранилище DB_DocumentsModel" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Addresses">
+    <Key>
+      <PropertyRef Name="IdAddress" />
+    </Key>
+    <Property Name="IdAddress" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Country" Type="nvarchar" MaxLength="80" Nullable="false" />
+    <Property Name="City" Type="nvarchar" MaxLength="80" Nullable="false" />
+    <Property Name="Street" Type="nvarchar" MaxLength="80" Nullable="false" />
+    <Property Name="HouseNumber" Type="nvarchar" MaxLength="7" Nullable="false" />
+    <Property Name="OfficeNumber" Type="int" />
+    <Property Name="AddressType" Type="tinyint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="addressTypes">
+    <Key>
+      <PropertyRef Name="addressTypeId" />
+    </Key>
+    <Property Name="addressTypeId" Type="tinyint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="addressTitle" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ContractAndDocument">
+    <Key>
+      <PropertyRef Name="IdContract" />
+      <PropertyRef Name="IdDocument" />
+    </Key>
+    <Property Name="IdContract" Type="int" Nullable="false" />
+    <Property Name="IdDocument" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Contracts">
+    <Key>
+      <PropertyRef Name="IdContract" />
+    </Key>
+    <Property Name="IdContract" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ContractNumber" Type="nvarchar" MaxLength="25" Nullable="false" />
+    <Property Name="DateFrom" Type="date" Nullable="false" />
+    <Property Name="DateEnd" Type="date" Nullable="false" />
+    <Property Name="DeliveryConditionsIncoterms" Type="nvarchar" MaxLength="6" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Directors">
+    <Key>
+      <PropertyRef Name="IdDirector" />
+    </Key>
+    <Property Name="IdDirector" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Surname" Type="nvarchar" MaxLength="80" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="80" Nullable="false" />
+    <Property Name="SecondName" Type="nvarchar" MaxLength="80" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Documents">
+    <Key>
+      <PropertyRef Name="IdDocument" />
+    </Key>
+    <Property Name="IdDocument" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DocumentNumber" Type="nvarchar" MaxLength="25" Nullable="false" />
+    <Property Name="Date" Type="date" Nullable="false" />
+    <Property Name="NDS" Type="float" />
+  </EntityType>
+  <EntityType Name="DocumentsAndTitle">
+    <Key>
+      <PropertyRef Name="IdDocument" />
+      <PropertyRef Name="IdTitle" />
+    </Key>
+    <Property Name="IdDocument" Type="int" Nullable="false" />
+    <Property Name="IdTitle" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="DocumentTitle">
+    <Key>
+      <PropertyRef Name="IdTitle" />
+    </Key>
+    <Property Name="IdTitle" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Title" Type="nvarchar" MaxLength="400" Nullable="false" />
+    <Property Name="UnitMeasurements" Type="nvarchar" MaxLength="8" Nullable="false" />
+    <Property Name="Amount" Type="float" Nullable="false" />
+    <Property Name="PriceWithoutNDS" Type="float" Nullable="false" />
+    <Property Name="SumWithoutNDS" Type="float" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Firms">
+    <Key>
+      <PropertyRef Name="IdFirm" />
+    </Key>
+    <Property Name="IdFirm" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TitleFirm" Type="nvarchar" MaxLength="150" Nullable="false" />
+    <Property Name="IdAddressLegal" Type="int" />
+    <Property Name="IdAddressActual" Type="int" />
+    <Property Name="IdDirector" Type="int" />
+  </EntityType>
+  <EntityType Name="FirmsAndProviders">
+    <Key>
+      <PropertyRef Name="IdFirm" />
+      <PropertyRef Name="IdProvider" />
+    </Key>
+    <Property Name="IdFirm" Type="int" Nullable="false" />
+    <Property Name="IdProvider" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Providers">
+    <Key>
+      <PropertyRef Name="IdProvider" />
+    </Key>
+    <Property Name="IdProvider" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TitleProvider" Type="nvarchar" MaxLength="180" Nullable="false" />
+    <Property Name="IdAddressProviderLegal" Type="int" />
+    <Property Name="IdAddressProviderActual" Type="int" />
+    <Property Name="IdDirector" Type="int" />
+    <Property Name="IdAddressStore" Type="int" />
+  </EntityType>
+  <EntityType Name="ProvidersAndContracts">
+    <Key>
+      <PropertyRef Name="IdProvider" />
+      <PropertyRef Name="IdContract" />
+    </Key>
+    <Property Name="IdProvider" Type="int" Nullable="false" />
+    <Property Name="IdContract" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="IdUser" />
+    </Key>
+    <Property Name="IdUser" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Login" Type="nvarchar" MaxLength="70" Nullable="false" />
+    <Property Name="Password" Type="nvarchar" MaxLength="40" Nullable="false" />
+    <Property Name="UserType" Type="nvarchar" MaxLength="40" Nullable="false" />
+    <Property Name="Surname" Type="nvarchar" MaxLength="90" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="90" Nullable="false" />
+    <Property Name="SecondName" Type="nvarchar" MaxLength="90" />
+  </EntityType>
+  <Association Name="FK_Addresses_addressTypes">
+    <End Role="addressTypes" Type="Self.addressTypes" Multiplicity="1" />
+    <End Role="Addresses" Type="Self.Addresses" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="addressTypes">
+        <PropertyRef Name="addressTypeId" />
+      </Principal>
+      <Dependent Role="Addresses">
+        <PropertyRef Name="AddressType" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ContractAndDocument_Contracts">
+    <End Role="Contracts" Type="Self.Contracts" Multiplicity="1" />
+    <End Role="ContractAndDocument" Type="Self.ContractAndDocument" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Contracts">
+        <PropertyRef Name="IdContract" />
+      </Principal>
+      <Dependent Role="ContractAndDocument">
+        <PropertyRef Name="IdContract" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ContractAndDocument_Documents">
+    <End Role="Documents" Type="Self.Documents" Multiplicity="1" />
+    <End Role="ContractAndDocument" Type="Self.ContractAndDocument" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Documents">
+        <PropertyRef Name="IdDocument" />
+      </Principal>
+      <Dependent Role="ContractAndDocument">
+        <PropertyRef Name="IdDocument" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DocumentsAndTitle_Documents">
+    <End Role="Documents" Type="Self.Documents" Multiplicity="1" />
+    <End Role="DocumentsAndTitle" Type="Self.DocumentsAndTitle" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Documents">
+        <PropertyRef Name="IdDocument" />
+      </Principal>
+      <Dependent Role="DocumentsAndTitle">
+        <PropertyRef Name="IdDocument" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DocumentsAndTitle_DocumentTitle">
+    <End Role="DocumentTitle" Type="Self.DocumentTitle" Multiplicity="1" />
+    <End Role="DocumentsAndTitle" Type="Self.DocumentsAndTitle" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DocumentTitle">
+        <PropertyRef Name="IdTitle" />
+      </Principal>
+      <Dependent Role="DocumentsAndTitle">
+        <PropertyRef Name="IdTitle" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Firms_Addresses">
+    <End Role="Addresses" Type="Self.Addresses" Multiplicity="0..1" />
+    <End Role="Firms" Type="Self.Firms" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Addresses">
+        <PropertyRef Name="IdAddress" />
+      </Principal>
+      <Dependent Role="Firms">
+        <PropertyRef Name="IdAddressLegal" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Firms_Addresses1">
+    <End Role="Addresses" Type="Self.Addresses" Multiplicity="0..1" />
+    <End Role="Firms" Type="Self.Firms" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Addresses">
+        <PropertyRef Name="IdAddress" />
+      </Principal>
+      <Dependent Role="Firms">
+        <PropertyRef Name="IdAddressActual" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Firms_Directors">
+    <End Role="Directors" Type="Self.Directors" Multiplicity="0..1" />
+    <End Role="Firms" Type="Self.Firms" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Directors">
+        <PropertyRef Name="IdDirector" />
+      </Principal>
+      <Dependent Role="Firms">
+        <PropertyRef Name="IdDirector" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_FirmsAndProviders_Firms">
+    <End Role="Firms" Type="Self.Firms" Multiplicity="1" />
+    <End Role="FirmsAndProviders" Type="Self.FirmsAndProviders" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Firms">
+        <PropertyRef Name="IdFirm" />
+      </Principal>
+      <Dependent Role="FirmsAndProviders">
+        <PropertyRef Name="IdFirm" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_FirmsAndProviders_Providers">
+    <End Role="Providers" Type="Self.Providers" Multiplicity="1" />
+    <End Role="FirmsAndProviders" Type="Self.FirmsAndProviders" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Providers">
+        <PropertyRef Name="IdProvider" />
+      </Principal>
+      <Dependent Role="FirmsAndProviders">
+        <PropertyRef Name="IdProvider" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Providers_Addresses">
+    <End Role="Addresses" Type="Self.Addresses" Multiplicity="0..1" />
+    <End Role="Providers" Type="Self.Providers" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Addresses">
+        <PropertyRef Name="IdAddress" />
+      </Principal>
+      <Dependent Role="Providers">
+        <PropertyRef Name="IdAddressProviderLegal" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Providers_Addresses1">
+    <End Role="Addresses" Type="Self.Addresses" Multiplicity="0..1" />
+    <End Role="Providers" Type="Self.Providers" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Addresses">
+        <PropertyRef Name="IdAddress" />
+      </Principal>
+      <Dependent Role="Providers">
+        <PropertyRef Name="IdAddressProviderActual" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Providers_Addresses2">
+    <End Role="Addresses" Type="Self.Addresses" Multiplicity="0..1" />
+    <End Role="Providers" Type="Self.Providers" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Addresses">
+        <PropertyRef Name="IdAddress" />
+      </Principal>
+      <Dependent Role="Providers">
+        <PropertyRef Name="IdAddressStore" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Providers_Directors">
+    <End Role="Directors" Type="Self.Directors" Multiplicity="0..1" />
+    <End Role="Providers" Type="Self.Providers" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Directors">
+        <PropertyRef Name="IdDirector" />
+      </Principal>
+      <Dependent Role="Providers">
+        <PropertyRef Name="IdDirector" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProvidersAndContracts_Contracts">
+    <End Role="Contracts" Type="Self.Contracts" Multiplicity="1" />
+    <End Role="ProvidersAndContracts" Type="Self.ProvidersAndContracts" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Contracts">
+        <PropertyRef Name="IdContract" />
+      </Principal>
+      <Dependent Role="ProvidersAndContracts">
+        <PropertyRef Name="IdContract" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProvidersAndContracts_Providers">
+    <End Role="Providers" Type="Self.Providers" Multiplicity="1" />
+    <End Role="ProvidersAndContracts" Type="Self.ProvidersAndContracts" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Providers">
+        <PropertyRef Name="IdProvider" />
+      </Principal>
+      <Dependent Role="ProvidersAndContracts">
+        <PropertyRef Name="IdProvider" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="Хранилище DB_DocumentsModelContainer">
+    <EntitySet Name="Addresses" EntityType="Self.Addresses" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="addressTypes" EntityType="Self.addressTypes" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ContractAndDocument" EntityType="Self.ContractAndDocument" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Contracts" EntityType="Self.Contracts" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Directors" EntityType="Self.Directors" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Documents" EntityType="Self.Documents" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DocumentsAndTitle" EntityType="Self.DocumentsAndTitle" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DocumentTitle" EntityType="Self.DocumentTitle" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Firms" EntityType="Self.Firms" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="FirmsAndProviders" EntityType="Self.FirmsAndProviders" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Providers" EntityType="Self.Providers" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ProvidersAndContracts" EntityType="Self.ProvidersAndContracts" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="User" EntityType="Self.User" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_Addresses_addressTypes" Association="Self.FK_Addresses_addressTypes">
+      <End Role="addressTypes" EntitySet="addressTypes" />
+      <End Role="Addresses" EntitySet="Addresses" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ContractAndDocument_Contracts" Association="Self.FK_ContractAndDocument_Contracts">
+      <End Role="Contracts" EntitySet="Contracts" />
+      <End Role="ContractAndDocument" EntitySet="ContractAndDocument" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ContractAndDocument_Documents" Association="Self.FK_ContractAndDocument_Documents">
+      <End Role="Documents" EntitySet="Documents" />
+      <End Role="ContractAndDocument" EntitySet="ContractAndDocument" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DocumentsAndTitle_Documents" Association="Self.FK_DocumentsAndTitle_Documents">
+      <End Role="Documents" EntitySet="Documents" />
+      <End Role="DocumentsAndTitle" EntitySet="DocumentsAndTitle" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DocumentsAndTitle_DocumentTitle" Association="Self.FK_DocumentsAndTitle_DocumentTitle">
+      <End Role="DocumentTitle" EntitySet="DocumentTitle" />
+      <End Role="DocumentsAndTitle" EntitySet="DocumentsAndTitle" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Firms_Addresses" Association="Self.FK_Firms_Addresses">
+      <End Role="Addresses" EntitySet="Addresses" />
+      <End Role="Firms" EntitySet="Firms" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Firms_Addresses1" Association="Self.FK_Firms_Addresses1">
+      <End Role="Addresses" EntitySet="Addresses" />
+      <End Role="Firms" EntitySet="Firms" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Firms_Directors" Association="Self.FK_Firms_Directors">
+      <End Role="Directors" EntitySet="Directors" />
+      <End Role="Firms" EntitySet="Firms" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FirmsAndProviders_Firms" Association="Self.FK_FirmsAndProviders_Firms">
+      <End Role="Firms" EntitySet="Firms" />
+      <End Role="FirmsAndProviders" EntitySet="FirmsAndProviders" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FirmsAndProviders_Providers" Association="Self.FK_FirmsAndProviders_Providers">
+      <End Role="Providers" EntitySet="Providers" />
+      <End Role="FirmsAndProviders" EntitySet="FirmsAndProviders" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Providers_Addresses" Association="Self.FK_Providers_Addresses">
+      <End Role="Addresses" EntitySet="Addresses" />
+      <End Role="Providers" EntitySet="Providers" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Providers_Addresses1" Association="Self.FK_Providers_Addresses1">
+      <End Role="Addresses" EntitySet="Addresses" />
+      <End Role="Providers" EntitySet="Providers" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Providers_Addresses2" Association="Self.FK_Providers_Addresses2">
+      <End Role="Addresses" EntitySet="Addresses" />
+      <End Role="Providers" EntitySet="Providers" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Providers_Directors" Association="Self.FK_Providers_Directors">
+      <End Role="Directors" EntitySet="Directors" />
+      <End Role="Providers" EntitySet="Providers" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProvidersAndContracts_Contracts" Association="Self.FK_ProvidersAndContracts_Contracts">
+      <End Role="Contracts" EntitySet="Contracts" />
+      <End Role="ProvidersAndContracts" EntitySet="ProvidersAndContracts" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProvidersAndContracts_Providers" Association="Self.FK_ProvidersAndContracts_Providers">
+      <End Role="Providers" EntitySet="Providers" />
+      <End Role="ProvidersAndContracts" EntitySet="ProvidersAndContracts" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

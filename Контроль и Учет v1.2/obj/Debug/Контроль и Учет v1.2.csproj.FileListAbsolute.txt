@@ -1,0 +1,159 @@
+E:\Games\asp.net video\!! Video\Контроль и Учет v1.2\Контроль и Учет v1.2\bin\ApplicationInsights.config
+E:\Games\asp.net video\!! Video\Контроль и Учет v1.2\Контроль и Учет v1.2\bin\Контроль и Учет v1.2.dll.config
+E:\Games\asp.net video\!! Video\Контроль и Учет v1.2\Контроль и Учет v1.2\bin\Контроль и Учет v1.2.dll
+E:\Games\asp.net video\!! Video\Контроль и Учет v1.2\Контроль и Учет v1.2\bin\Контроль и Учет v1.2.pdb
+E:\Games\asp.net video\!! Video\Контроль и Учет v1.2\Контроль и Учет v1.2\bin\Antlr3.Runtime.dll
+E:\Games\asp.net video\!! Video\Контроль и Учет v1.2\Контроль и Учет v1.2\bin\Microsoft.AI.Agent.Intercept.dll
+E:\Games\asp.net video\!! Video\Контроль и Учет v1.2\Контроль и Учет v1.2\bin\Microsoft.AI.DependencyCollector.dll
+E:\Games\asp.net video\!! Video\Контроль и Учет v1.2\Контроль и Учет v1.2\bin\Microsoft.AI.PerfCounterCollector.dll
+E:\Games\asp.net video\!! Video\Контроль и Учет v1.2\Контроль и Учет v1.2\bin\Microsoft.AI.ServerTelemetryChannel.dll
+E:\Games\asp.net video\!! Video\Контроль и Учет v1.2\Контроль и Учет v1.2\bin\Microsoft.AI.Web.dll
+E:\Games\asp.net video\!! Video\Контроль и Учет v1.2\Контроль и Учет v1.2\bin\Microsoft.AI.WindowsServer.dll
+E:\Games\asp.net video\!! Video\Контроль и Учет v1.2\Контроль и Учет v1.2\bin\Microsoft.ApplicationInsights.dll
+E:\Games\asp.net video\!! Video\Контроль и Учет v1.2\Контроль и Учет v1.2\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+E:\Games\asp.net video\!! Video\Контроль и Учет v1.2\Контроль и Учет v1.2\bin\Microsoft.Web.Infrastructure.dll
+E:\Games\asp.net video\!! Video\Контроль и Учет v1.2\Контроль и Учет v1.2\bin\Newtonsoft.Json.dll
+E:\Games\asp.net video\!! Video\Контроль и Учет v1.2\Контроль и Учет v1.2\bin\System.Web.Helpers.dll
+E:\Games\asp.net video\!! Video\Контроль и Учет v1.2\Контроль и Учет v1.2\bin\System.Web.Mvc.dll
+E:\Games\asp.net video\!! Video\Контроль и Учет v1.2\Контроль и Учет v1.2\bin\System.Web.Optimization.dll
+E:\Games\asp.net video\!! Video\Контроль и Учет v1.2\Контроль и Учет v1.2\bin\System.Web.Razor.dll
+E:\Games\asp.net video\!! Video\Контроль и Учет v1.2\Контроль и Учет v1.2\bin\System.Web.WebPages.Deployment.dll
+E:\Games\asp.net video\!! Video\Контроль и Учет v1.2\Контроль и Учет v1.2\bin\System.Web.WebPages.dll
+E:\Games\asp.net video\!! Video\Контроль и Учет v1.2\Контроль и Учет v1.2\bin\System.Web.WebPages.Razor.dll
+E:\Games\asp.net video\!! Video\Контроль и Учет v1.2\Контроль и Учет v1.2\bin\WebGrease.dll
+E:\Games\asp.net video\!! Video\Контроль и Учет v1.2\Контроль и Учет v1.2\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+E:\Games\asp.net video\!! Video\Контроль и Учет v1.2\Контроль и Учет v1.2\bin\System.Web.Helpers.xml
+E:\Games\asp.net video\!! Video\Контроль и Учет v1.2\Контроль и Учет v1.2\bin\System.Web.Mvc.xml
+E:\Games\asp.net video\!! Video\Контроль и Учет v1.2\Контроль и Учет v1.2\bin\System.Web.Optimization.xml
+E:\Games\asp.net video\!! Video\Контроль и Учет v1.2\Контроль и Учет v1.2\bin\System.Web.Razor.xml
+E:\Games\asp.net video\!! Video\Контроль и Учет v1.2\Контроль и Учет v1.2\bin\System.Web.WebPages.xml
+E:\Games\asp.net video\!! Video\Контроль и Учет v1.2\Контроль и Учет v1.2\bin\System.Web.WebPages.Deployment.xml
+E:\Games\asp.net video\!! Video\Контроль и Учет v1.2\Контроль и Учет v1.2\bin\System.Web.WebPages.Razor.xml
+E:\Games\asp.net video\!! Video\Контроль и Учет v1.2\Контроль и Учет v1.2\bin\Antlr3.Runtime.pdb
+E:\Games\asp.net video\!! Video\Контроль и Учет v1.2\Контроль и Учет v1.2\bin\Newtonsoft.Json.xml
+E:\Games\asp.net video\!! Video\Контроль и Учет v1.2\Контроль и Учет v1.2\bin\Microsoft.ApplicationInsights.xml
+E:\Games\asp.net video\!! Video\Контроль и Учет v1.2\Контроль и Учет v1.2\bin\Microsoft.AI.DependencyCollector.xml
+E:\Games\asp.net video\!! Video\Контроль и Учет v1.2\Контроль и Учет v1.2\bin\Microsoft.AI.ServerTelemetryChannel.xml
+E:\Games\asp.net video\!! Video\Контроль и Учет v1.2\Контроль и Учет v1.2\bin\Microsoft.AI.WindowsServer.xml
+E:\Games\asp.net video\!! Video\Контроль и Учет v1.2\Контроль и Учет v1.2\bin\Microsoft.AI.Web.xml
+E:\Games\asp.net video\!! Video\Контроль и Учет v1.2\Контроль и Учет v1.2\bin\ru\System.Web.Helpers.resources.dll
+E:\Games\asp.net video\!! Video\Контроль и Учет v1.2\Контроль и Учет v1.2\bin\ru\System.Web.Mvc.resources.dll
+E:\Games\asp.net video\!! Video\Контроль и Учет v1.2\Контроль и Учет v1.2\bin\ru\System.Web.Optimization.resources.dll
+E:\Games\asp.net video\!! Video\Контроль и Учет v1.2\Контроль и Учет v1.2\bin\ru\System.Web.Razor.resources.dll
+E:\Games\asp.net video\!! Video\Контроль и Учет v1.2\Контроль и Учет v1.2\bin\ru\System.Web.WebPages.resources.dll
+E:\Games\asp.net video\!! Video\Контроль и Учет v1.2\Контроль и Учет v1.2\bin\ru\System.Web.WebPages.Deployment.resources.dll
+E:\Games\asp.net video\!! Video\Контроль и Учет v1.2\Контроль и Учет v1.2\bin\ru\System.Web.WebPages.Razor.resources.dll
+E:\Games\asp.net video\!! Video\Контроль и Учет v1.2\Контроль и Учет v1.2\obj\Debug\Контроль и Учет v1.2.csproj.CoreCompileInputs.cache
+E:\Games\asp.net video\!! Video\Контроль и Учет v1.2\Контроль и Учет v1.2\obj\Debug\Контроль и Учет v1.2.dll
+E:\Games\asp.net video\!! Video\Контроль и Учет v1.2\Контроль и Учет v1.2\obj\Debug\Контроль и Учет v1.2.pdb
+E:\Games\asp.net video\!! Video\Контроль и Учет v1.2\Контроль и Учет v1.2\bin\EntityFramework.dll
+E:\Games\asp.net video\!! Video\Контроль и Учет v1.2\Контроль и Учет v1.2\bin\EntityFramework.SqlServer.dll
+E:\Games\asp.net video\!! Video\Контроль и Учет v1.2\Контроль и Учет v1.2\bin\EntityFramework.xml
+E:\Games\asp.net video\!! Video\Контроль и Учет v1.2\Контроль и Учет v1.2\bin\EntityFramework.SqlServer.xml
+E:\Games\asp.net video\!! Video\Контроль и Учет v1.2\Контроль и Учет v1.2\obj\Debug\Контроль и Учет v1.2.csprojResolveAssemblyReference.cache
+E:\Games\asp.net video\Контроль и Учет v1.2\Контроль и Учет v1.2\bin\ApplicationInsights.config
+E:\Games\asp.net video\Контроль и Учет v1.2\Контроль и Учет v1.2\bin\Контроль и Учет v1.2.dll.config
+E:\Games\asp.net video\Контроль и Учет v1.2\Контроль и Учет v1.2\bin\Контроль и Учет v1.2.dll
+E:\Games\asp.net video\Контроль и Учет v1.2\Контроль и Учет v1.2\bin\Контроль и Учет v1.2.pdb
+E:\Games\asp.net video\Контроль и Учет v1.2\Контроль и Учет v1.2\bin\Antlr3.Runtime.dll
+E:\Games\asp.net video\Контроль и Учет v1.2\Контроль и Учет v1.2\bin\EntityFramework.dll
+E:\Games\asp.net video\Контроль и Учет v1.2\Контроль и Учет v1.2\bin\EntityFramework.SqlServer.dll
+E:\Games\asp.net video\Контроль и Учет v1.2\Контроль и Учет v1.2\bin\Microsoft.AI.Agent.Intercept.dll
+E:\Games\asp.net video\Контроль и Учет v1.2\Контроль и Учет v1.2\bin\Microsoft.AI.DependencyCollector.dll
+E:\Games\asp.net video\Контроль и Учет v1.2\Контроль и Учет v1.2\bin\Microsoft.AI.PerfCounterCollector.dll
+E:\Games\asp.net video\Контроль и Учет v1.2\Контроль и Учет v1.2\bin\Microsoft.AI.ServerTelemetryChannel.dll
+E:\Games\asp.net video\Контроль и Учет v1.2\Контроль и Учет v1.2\bin\Microsoft.AI.Web.dll
+E:\Games\asp.net video\Контроль и Учет v1.2\Контроль и Учет v1.2\bin\Microsoft.AI.WindowsServer.dll
+E:\Games\asp.net video\Контроль и Учет v1.2\Контроль и Учет v1.2\bin\Microsoft.ApplicationInsights.dll
+E:\Games\asp.net video\Контроль и Учет v1.2\Контроль и Учет v1.2\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+E:\Games\asp.net video\Контроль и Учет v1.2\Контроль и Учет v1.2\bin\Microsoft.Web.Infrastructure.dll
+E:\Games\asp.net video\Контроль и Учет v1.2\Контроль и Учет v1.2\bin\Newtonsoft.Json.dll
+E:\Games\asp.net video\Контроль и Учет v1.2\Контроль и Учет v1.2\bin\System.Web.Helpers.dll
+E:\Games\asp.net video\Контроль и Учет v1.2\Контроль и Учет v1.2\bin\System.Web.Mvc.dll
+E:\Games\asp.net video\Контроль и Учет v1.2\Контроль и Учет v1.2\bin\System.Web.Optimization.dll
+E:\Games\asp.net video\Контроль и Учет v1.2\Контроль и Учет v1.2\bin\System.Web.Razor.dll
+E:\Games\asp.net video\Контроль и Учет v1.2\Контроль и Учет v1.2\bin\System.Web.WebPages.Deployment.dll
+E:\Games\asp.net video\Контроль и Учет v1.2\Контроль и Учет v1.2\bin\System.Web.WebPages.dll
+E:\Games\asp.net video\Контроль и Учет v1.2\Контроль и Учет v1.2\bin\System.Web.WebPages.Razor.dll
+E:\Games\asp.net video\Контроль и Учет v1.2\Контроль и Учет v1.2\bin\WebGrease.dll
+E:\Games\asp.net video\Контроль и Учет v1.2\Контроль и Учет v1.2\bin\EntityFramework.xml
+E:\Games\asp.net video\Контроль и Учет v1.2\Контроль и Учет v1.2\bin\EntityFramework.SqlServer.xml
+E:\Games\asp.net video\Контроль и Учет v1.2\Контроль и Учет v1.2\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+E:\Games\asp.net video\Контроль и Учет v1.2\Контроль и Учет v1.2\bin\Newtonsoft.Json.xml
+E:\Games\asp.net video\Контроль и Учет v1.2\Контроль и Учет v1.2\bin\System.Web.Razor.xml
+E:\Games\asp.net video\Контроль и Учет v1.2\Контроль и Учет v1.2\bin\System.Web.Helpers.xml
+E:\Games\asp.net video\Контроль и Учет v1.2\Контроль и Учет v1.2\bin\System.Web.Mvc.xml
+E:\Games\asp.net video\Контроль и Учет v1.2\Контроль и Учет v1.2\bin\System.Web.Optimization.xml
+E:\Games\asp.net video\Контроль и Учет v1.2\Контроль и Учет v1.2\bin\System.Web.WebPages.xml
+E:\Games\asp.net video\Контроль и Учет v1.2\Контроль и Учет v1.2\bin\System.Web.WebPages.Deployment.xml
+E:\Games\asp.net video\Контроль и Учет v1.2\Контроль и Учет v1.2\bin\System.Web.WebPages.Razor.xml
+E:\Games\asp.net video\Контроль и Учет v1.2\Контроль и Учет v1.2\bin\Antlr3.Runtime.pdb
+E:\Games\asp.net video\Контроль и Учет v1.2\Контроль и Учет v1.2\bin\Microsoft.ApplicationInsights.xml
+E:\Games\asp.net video\Контроль и Учет v1.2\Контроль и Учет v1.2\bin\Microsoft.AI.DependencyCollector.xml
+E:\Games\asp.net video\Контроль и Учет v1.2\Контроль и Учет v1.2\bin\Microsoft.AI.ServerTelemetryChannel.xml
+E:\Games\asp.net video\Контроль и Учет v1.2\Контроль и Учет v1.2\bin\Microsoft.AI.WindowsServer.xml
+E:\Games\asp.net video\Контроль и Учет v1.2\Контроль и Учет v1.2\bin\Microsoft.AI.Web.xml
+E:\Games\asp.net video\Контроль и Учет v1.2\Контроль и Учет v1.2\bin\ru\System.Web.Razor.resources.dll
+E:\Games\asp.net video\Контроль и Учет v1.2\Контроль и Учет v1.2\bin\ru\System.Web.Helpers.resources.dll
+E:\Games\asp.net video\Контроль и Учет v1.2\Контроль и Учет v1.2\bin\ru\System.Web.Mvc.resources.dll
+E:\Games\asp.net video\Контроль и Учет v1.2\Контроль и Учет v1.2\bin\ru\System.Web.Optimization.resources.dll
+E:\Games\asp.net video\Контроль и Учет v1.2\Контроль и Учет v1.2\bin\ru\System.Web.WebPages.resources.dll
+E:\Games\asp.net video\Контроль и Учет v1.2\Контроль и Учет v1.2\bin\ru\System.Web.WebPages.Deployment.resources.dll
+E:\Games\asp.net video\Контроль и Учет v1.2\Контроль и Учет v1.2\bin\ru\System.Web.WebPages.Razor.resources.dll
+E:\Games\asp.net video\Контроль и Учет v1.2\Контроль и Учет v1.2\obj\Debug\Контроль и Учет v1.2.csprojResolveAssemblyReference.cache
+E:\Games\asp.net video\Контроль и Учет v1.2\Контроль и Учет v1.2\obj\Debug\Контроль и Учет v1.2.csproj.CoreCompileInputs.cache
+E:\Games\asp.net video\Контроль и Учет v1.2\Контроль и Учет v1.2\obj\Debug\Контроль и Учет v1.2.dll
+E:\Games\asp.net video\Контроль и Учет v1.2\Контроль и Учет v1.2\obj\Debug\Контроль и Учет v1.2.pdb
+E:\ШАГ\!! - Курсовая работа 2018 - !!!\Контроль и Учет v1.2\Контроль и Учет v1.2\bin\ApplicationInsights.config
+E:\ШАГ\!! - Курсовая работа 2018 - !!!\Контроль и Учет v1.2\Контроль и Учет v1.2\bin\Контроль и Учет v1.2.dll.config
+E:\ШАГ\!! - Курсовая работа 2018 - !!!\Контроль и Учет v1.2\Контроль и Учет v1.2\bin\Контроль и Учет v1.2.dll
+E:\ШАГ\!! - Курсовая работа 2018 - !!!\Контроль и Учет v1.2\Контроль и Учет v1.2\bin\Контроль и Учет v1.2.pdb
+E:\ШАГ\!! - Курсовая работа 2018 - !!!\Контроль и Учет v1.2\Контроль и Учет v1.2\bin\Antlr3.Runtime.dll
+E:\ШАГ\!! - Курсовая работа 2018 - !!!\Контроль и Учет v1.2\Контроль и Учет v1.2\bin\EntityFramework.dll
+E:\ШАГ\!! - Курсовая работа 2018 - !!!\Контроль и Учет v1.2\Контроль и Учет v1.2\bin\EntityFramework.SqlServer.dll
+E:\ШАГ\!! - Курсовая работа 2018 - !!!\Контроль и Учет v1.2\Контроль и Учет v1.2\bin\Microsoft.AI.Agent.Intercept.dll
+E:\ШАГ\!! - Курсовая работа 2018 - !!!\Контроль и Учет v1.2\Контроль и Учет v1.2\bin\Microsoft.AI.DependencyCollector.dll
+E:\ШАГ\!! - Курсовая работа 2018 - !!!\Контроль и Учет v1.2\Контроль и Учет v1.2\bin\Microsoft.AI.PerfCounterCollector.dll
+E:\ШАГ\!! - Курсовая работа 2018 - !!!\Контроль и Учет v1.2\Контроль и Учет v1.2\bin\Microsoft.AI.ServerTelemetryChannel.dll
+E:\ШАГ\!! - Курсовая работа 2018 - !!!\Контроль и Учет v1.2\Контроль и Учет v1.2\bin\Microsoft.AI.Web.dll
+E:\ШАГ\!! - Курсовая работа 2018 - !!!\Контроль и Учет v1.2\Контроль и Учет v1.2\bin\Microsoft.AI.WindowsServer.dll
+E:\ШАГ\!! - Курсовая работа 2018 - !!!\Контроль и Учет v1.2\Контроль и Учет v1.2\bin\Microsoft.ApplicationInsights.dll
+E:\ШАГ\!! - Курсовая работа 2018 - !!!\Контроль и Учет v1.2\Контроль и Учет v1.2\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+E:\ШАГ\!! - Курсовая работа 2018 - !!!\Контроль и Учет v1.2\Контроль и Учет v1.2\bin\Microsoft.Web.Infrastructure.dll
+E:\ШАГ\!! - Курсовая работа 2018 - !!!\Контроль и Учет v1.2\Контроль и Учет v1.2\bin\Newtonsoft.Json.dll
+E:\ШАГ\!! - Курсовая работа 2018 - !!!\Контроль и Учет v1.2\Контроль и Учет v1.2\bin\System.Web.Helpers.dll
+E:\ШАГ\!! - Курсовая работа 2018 - !!!\Контроль и Учет v1.2\Контроль и Учет v1.2\bin\System.Web.Mvc.dll
+E:\ШАГ\!! - Курсовая работа 2018 - !!!\Контроль и Учет v1.2\Контроль и Учет v1.2\bin\System.Web.Optimization.dll
+E:\ШАГ\!! - Курсовая работа 2018 - !!!\Контроль и Учет v1.2\Контроль и Учет v1.2\bin\System.Web.Razor.dll
+E:\ШАГ\!! - Курсовая работа 2018 - !!!\Контроль и Учет v1.2\Контроль и Учет v1.2\bin\System.Web.WebPages.Deployment.dll
+E:\ШАГ\!! - Курсовая работа 2018 - !!!\Контроль и Учет v1.2\Контроль и Учет v1.2\bin\System.Web.WebPages.dll
+E:\ШАГ\!! - Курсовая работа 2018 - !!!\Контроль и Учет v1.2\Контроль и Учет v1.2\bin\System.Web.WebPages.Razor.dll
+E:\ШАГ\!! - Курсовая работа 2018 - !!!\Контроль и Учет v1.2\Контроль и Учет v1.2\bin\WebGrease.dll
+E:\ШАГ\!! - Курсовая работа 2018 - !!!\Контроль и Учет v1.2\Контроль и Учет v1.2\bin\EntityFramework.xml
+E:\ШАГ\!! - Курсовая работа 2018 - !!!\Контроль и Учет v1.2\Контроль и Учет v1.2\bin\EntityFramework.SqlServer.xml
+E:\ШАГ\!! - Курсовая работа 2018 - !!!\Контроль и Учет v1.2\Контроль и Учет v1.2\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+E:\ШАГ\!! - Курсовая работа 2018 - !!!\Контроль и Учет v1.2\Контроль и Учет v1.2\bin\Newtonsoft.Json.xml
+E:\ШАГ\!! - Курсовая работа 2018 - !!!\Контроль и Учет v1.2\Контроль и Учет v1.2\bin\System.Web.Razor.xml
+E:\ШАГ\!! - Курсовая работа 2018 - !!!\Контроль и Учет v1.2\Контроль и Учет v1.2\bin\System.Web.Helpers.xml
+E:\ШАГ\!! - Курсовая работа 2018 - !!!\Контроль и Учет v1.2\Контроль и Учет v1.2\bin\System.Web.Mvc.xml
+E:\ШАГ\!! - Курсовая работа 2018 - !!!\Контроль и Учет v1.2\Контроль и Учет v1.2\bin\System.Web.Optimization.xml
+E:\ШАГ\!! - Курсовая работа 2018 - !!!\Контроль и Учет v1.2\Контроль и Учет v1.2\bin\System.Web.WebPages.xml
+E:\ШАГ\!! - Курсовая работа 2018 - !!!\Контроль и Учет v1.2\Контроль и Учет v1.2\bin\System.Web.WebPages.Deployment.xml
+E:\ШАГ\!! - Курсовая работа 2018 - !!!\Контроль и Учет v1.2\Контроль и Учет v1.2\bin\System.Web.WebPages.Razor.xml
+E:\ШАГ\!! - Курсовая работа 2018 - !!!\Контроль и Учет v1.2\Контроль и Учет v1.2\bin\Antlr3.Runtime.pdb
+E:\ШАГ\!! - Курсовая работа 2018 - !!!\Контроль и Учет v1.2\Контроль и Учет v1.2\bin\Microsoft.ApplicationInsights.xml
+E:\ШАГ\!! - Курсовая работа 2018 - !!!\Контроль и Учет v1.2\Контроль и Учет v1.2\bin\Microsoft.AI.DependencyCollector.xml
+E:\ШАГ\!! - Курсовая работа 2018 - !!!\Контроль и Учет v1.2\Контроль и Учет v1.2\bin\Microsoft.AI.ServerTelemetryChannel.xml
+E:\ШАГ\!! - Курсовая работа 2018 - !!!\Контроль и Учет v1.2\Контроль и Учет v1.2\bin\Microsoft.AI.WindowsServer.xml
+E:\ШАГ\!! - Курсовая работа 2018 - !!!\Контроль и Учет v1.2\Контроль и Учет v1.2\bin\Microsoft.AI.Web.xml
+E:\ШАГ\!! - Курсовая работа 2018 - !!!\Контроль и Учет v1.2\Контроль и Учет v1.2\bin\ru\System.Web.Razor.resources.dll
+E:\ШАГ\!! - Курсовая работа 2018 - !!!\Контроль и Учет v1.2\Контроль и Учет v1.2\bin\ru\System.Web.Helpers.resources.dll
+E:\ШАГ\!! - Курсовая работа 2018 - !!!\Контроль и Учет v1.2\Контроль и Учет v1.2\bin\ru\System.Web.Mvc.resources.dll
+E:\ШАГ\!! - Курсовая работа 2018 - !!!\Контроль и Учет v1.2\Контроль и Учет v1.2\bin\ru\System.Web.Optimization.resources.dll
+E:\ШАГ\!! - Курсовая работа 2018 - !!!\Контроль и Учет v1.2\Контроль и Учет v1.2\bin\ru\System.Web.WebPages.resources.dll
+E:\ШАГ\!! - Курсовая работа 2018 - !!!\Контроль и Учет v1.2\Контроль и Учет v1.2\bin\ru\System.Web.WebPages.Deployment.resources.dll
+E:\ШАГ\!! - Курсовая работа 2018 - !!!\Контроль и Учет v1.2\Контроль и Учет v1.2\bin\ru\System.Web.WebPages.Razor.resources.dll
+E:\ШАГ\!! - Курсовая работа 2018 - !!!\Контроль и Учет v1.2\Контроль и Учет v1.2\obj\Debug\Контроль и Учет v1.2.csprojResolveAssemblyReference.cache
+E:\ШАГ\!! - Курсовая работа 2018 - !!!\Контроль и Учет v1.2\Контроль и Учет v1.2\obj\Debug\Контроль и Учет v1.2.csproj.CoreCompileInputs.cache
+E:\ШАГ\!! - Курсовая работа 2018 - !!!\Контроль и Учет v1.2\Контроль и Учет v1.2\obj\Debug\Контроль и Учет v1.2.dll
+E:\ШАГ\!! - Курсовая работа 2018 - !!!\Контроль и Учет v1.2\Контроль и Учет v1.2\obj\Debug\Контроль и Учет v1.2.pdb

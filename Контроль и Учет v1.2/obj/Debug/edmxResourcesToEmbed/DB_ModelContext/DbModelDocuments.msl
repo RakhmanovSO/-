@@ -1,0 +1,148 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Хранилище DB_DocumentsModelContainer" CdmEntityContainer="DB_DocumentsEntities">
+    <EntitySetMapping Name="Addresses">
+      <EntityTypeMapping TypeName="DB_DocumentsModel.Addresses">
+        <MappingFragment StoreEntitySet="Addresses">
+          <ScalarProperty Name="IdAddress" ColumnName="IdAddress" />
+          <ScalarProperty Name="Country" ColumnName="Country" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="Street" ColumnName="Street" />
+          <ScalarProperty Name="HouseNumber" ColumnName="HouseNumber" />
+          <ScalarProperty Name="OfficeNumber" ColumnName="OfficeNumber" />
+          <ScalarProperty Name="AddressType" ColumnName="AddressType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="addressTypes">
+      <EntityTypeMapping TypeName="DB_DocumentsModel.addressTypes">
+        <MappingFragment StoreEntitySet="addressTypes">
+          <ScalarProperty Name="addressTypeId" ColumnName="addressTypeId" />
+          <ScalarProperty Name="addressTitle" ColumnName="addressTitle" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Contracts">
+      <EntityTypeMapping TypeName="DB_DocumentsModel.Contracts">
+        <MappingFragment StoreEntitySet="Contracts">
+          <ScalarProperty Name="IdContract" ColumnName="IdContract" />
+          <ScalarProperty Name="ContractNumber" ColumnName="ContractNumber" />
+          <ScalarProperty Name="DateFrom" ColumnName="DateFrom" />
+          <ScalarProperty Name="DateEnd" ColumnName="DateEnd" />
+          <ScalarProperty Name="DeliveryConditionsIncoterms" ColumnName="DeliveryConditionsIncoterms" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Directors">
+      <EntityTypeMapping TypeName="DB_DocumentsModel.Directors">
+        <MappingFragment StoreEntitySet="Directors">
+          <ScalarProperty Name="IdDirector" ColumnName="IdDirector" />
+          <ScalarProperty Name="Surname" ColumnName="Surname" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="SecondName" ColumnName="SecondName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Documents">
+      <EntityTypeMapping TypeName="DB_DocumentsModel.Documents">
+        <MappingFragment StoreEntitySet="Documents">
+          <ScalarProperty Name="IdDocument" ColumnName="IdDocument" />
+          <ScalarProperty Name="DocumentNumber" ColumnName="DocumentNumber" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="NDS" ColumnName="NDS" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DocumentTitle">
+      <EntityTypeMapping TypeName="DB_DocumentsModel.DocumentTitle">
+        <MappingFragment StoreEntitySet="DocumentTitle">
+          <ScalarProperty Name="IdTitle" ColumnName="IdTitle" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="UnitMeasurements" ColumnName="UnitMeasurements" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="PriceWithoutNDS" ColumnName="PriceWithoutNDS" />
+          <ScalarProperty Name="SumWithoutNDS" ColumnName="SumWithoutNDS" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Firms">
+      <EntityTypeMapping TypeName="DB_DocumentsModel.Firms">
+        <MappingFragment StoreEntitySet="Firms">
+          <ScalarProperty Name="IdFirm" ColumnName="IdFirm" />
+          <ScalarProperty Name="TitleFirm" ColumnName="TitleFirm" />
+          <ScalarProperty Name="IdAddressLegal" ColumnName="IdAddressLegal" />
+          <ScalarProperty Name="IdAddressActual" ColumnName="IdAddressActual" />
+          <ScalarProperty Name="IdDirector" ColumnName="IdDirector" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Providers">
+      <EntityTypeMapping TypeName="DB_DocumentsModel.Providers">
+        <MappingFragment StoreEntitySet="Providers">
+          <ScalarProperty Name="IdProvider" ColumnName="IdProvider" />
+          <ScalarProperty Name="TitleProvider" ColumnName="TitleProvider" />
+          <ScalarProperty Name="IdAddressProviderLegal" ColumnName="IdAddressProviderLegal" />
+          <ScalarProperty Name="IdAddressProviderActual" ColumnName="IdAddressProviderActual" />
+          <ScalarProperty Name="IdDirector" ColumnName="IdDirector" />
+          <ScalarProperty Name="IdAddressStore" ColumnName="IdAddressStore" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="DB_DocumentsModel.sysdiagrams">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="User">
+      <EntityTypeMapping TypeName="DB_DocumentsModel.User">
+        <MappingFragment StoreEntitySet="User">
+          <ScalarProperty Name="IdUser" ColumnName="IdUser" />
+          <ScalarProperty Name="Login" ColumnName="Login" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="UserType" ColumnName="UserType" />
+          <ScalarProperty Name="Surname" ColumnName="Surname" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="SecondName" ColumnName="SecondName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="ContractAndDocument" TypeName="DB_DocumentsModel.ContractAndDocument" StoreEntitySet="ContractAndDocument">
+      <EndProperty Name="Contracts">
+        <ScalarProperty Name="IdContract" ColumnName="IdContract" />
+      </EndProperty>
+      <EndProperty Name="Documents">
+        <ScalarProperty Name="IdDocument" ColumnName="IdDocument" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="DocumentsAndTitle" TypeName="DB_DocumentsModel.DocumentsAndTitle" StoreEntitySet="DocumentsAndTitle">
+      <EndProperty Name="Documents">
+        <ScalarProperty Name="IdDocument" ColumnName="IdDocument" />
+      </EndProperty>
+      <EndProperty Name="DocumentTitle">
+        <ScalarProperty Name="IdTitle" ColumnName="IdTitle" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="FirmsAndProviders" TypeName="DB_DocumentsModel.FirmsAndProviders" StoreEntitySet="FirmsAndProviders">
+      <EndProperty Name="Firms">
+        <ScalarProperty Name="IdFirm" ColumnName="IdFirm" />
+      </EndProperty>
+      <EndProperty Name="Providers">
+        <ScalarProperty Name="IdProvider" ColumnName="IdProvider" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="ProvidersAndContracts" TypeName="DB_DocumentsModel.ProvidersAndContracts" StoreEntitySet="ProvidersAndContracts">
+      <EndProperty Name="Contracts">
+        <ScalarProperty Name="IdContract" ColumnName="IdContract" />
+      </EndProperty>
+      <EndProperty Name="Providers">
+        <ScalarProperty Name="IdProvider" ColumnName="IdProvider" />
+      </EndProperty>
+    </AssociationSetMapping>
+  </EntityContainerMapping>
+</Mapping>

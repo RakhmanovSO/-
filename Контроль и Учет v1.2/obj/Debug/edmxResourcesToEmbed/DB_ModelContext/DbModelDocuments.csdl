@@ -1,0 +1,300 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DB_DocumentsModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Addresses">
+    <Key>
+      <PropertyRef Name="IdAddress" />
+    </Key>
+    <Property Name="IdAddress" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Country" Type="String" MaxLength="80" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="City" Type="String" MaxLength="80" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Street" Type="String" MaxLength="80" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="HouseNumber" Type="String" MaxLength="7" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="OfficeNumber" Type="Int32" />
+    <Property Name="AddressType" Type="Byte" Nullable="false" />
+    <NavigationProperty Name="addressTypes" Relationship="Self.FK_Addresses_addressTypes" FromRole="Addresses" ToRole="addressTypes" />
+    <NavigationProperty Name="Firms" Relationship="Self.FK_Firms_Addresses" FromRole="Addresses" ToRole="Firms" />
+    <NavigationProperty Name="Firms1" Relationship="Self.FK_Firms_Addresses1" FromRole="Addresses" ToRole="Firms" />
+    <NavigationProperty Name="Providers" Relationship="Self.FK_Providers_Addresses" FromRole="Addresses" ToRole="Providers" />
+    <NavigationProperty Name="Providers1" Relationship="Self.FK_Providers_Addresses1" FromRole="Addresses" ToRole="Providers" />
+    <NavigationProperty Name="Providers2" Relationship="Self.FK_Providers_Addresses2" FromRole="Addresses" ToRole="Providers" />
+  </EntityType>
+  <EntityType Name="addressTypes">
+    <Key>
+      <PropertyRef Name="addressTypeId" />
+    </Key>
+    <Property Name="addressTypeId" Type="Byte" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="addressTitle" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Addresses" Relationship="Self.FK_Addresses_addressTypes" FromRole="addressTypes" ToRole="Addresses" />
+  </EntityType>
+  <EntityType Name="Contracts">
+    <Key>
+      <PropertyRef Name="IdContract" />
+    </Key>
+    <Property Name="IdContract" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ContractNumber" Type="String" MaxLength="25" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="DateFrom" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="DateEnd" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="DeliveryConditionsIncoterms" Type="String" MaxLength="6" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Documents" Relationship="Self.ContractAndDocument" FromRole="Contracts" ToRole="Documents" />
+    <NavigationProperty Name="Providers" Relationship="Self.ProvidersAndContracts" FromRole="Contracts" ToRole="Providers" />
+  </EntityType>
+  <EntityType Name="Directors">
+    <Key>
+      <PropertyRef Name="IdDirector" />
+    </Key>
+    <Property Name="IdDirector" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Surname" Type="String" MaxLength="80" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="80" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="SecondName" Type="String" MaxLength="80" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Firms" Relationship="Self.FK_Firms_Directors" FromRole="Directors" ToRole="Firms" />
+    <NavigationProperty Name="Providers" Relationship="Self.FK_Providers_Directors" FromRole="Directors" ToRole="Providers" />
+  </EntityType>
+  <EntityType Name="Documents">
+    <Key>
+      <PropertyRef Name="IdDocument" />
+    </Key>
+    <Property Name="IdDocument" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DocumentNumber" Type="String" MaxLength="25" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Date" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="NDS" Type="Double" />
+    <NavigationProperty Name="Contracts" Relationship="Self.ContractAndDocument" FromRole="Documents" ToRole="Contracts" />
+    <NavigationProperty Name="DocumentTitle" Relationship="Self.DocumentsAndTitle" FromRole="Documents" ToRole="DocumentTitle" />
+  </EntityType>
+  <EntityType Name="DocumentTitle">
+    <Key>
+      <PropertyRef Name="IdTitle" />
+    </Key>
+    <Property Name="IdTitle" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Title" Type="String" MaxLength="400" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="UnitMeasurements" Type="String" MaxLength="8" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Amount" Type="Double" Nullable="false" />
+    <Property Name="PriceWithoutNDS" Type="Double" Nullable="false" />
+    <Property Name="SumWithoutNDS" Type="Double" Nullable="false" />
+    <NavigationProperty Name="Documents" Relationship="Self.DocumentsAndTitle" FromRole="DocumentTitle" ToRole="Documents" />
+  </EntityType>
+  <EntityType Name="Firms">
+    <Key>
+      <PropertyRef Name="IdFirm" />
+    </Key>
+    <Property Name="IdFirm" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TitleFirm" Type="String" MaxLength="150" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="IdAddressLegal" Type="Int32" />
+    <Property Name="IdAddressActual" Type="Int32" />
+    <Property Name="IdDirector" Type="Int32" />
+    <NavigationProperty Name="Addresses" Relationship="Self.FK_Firms_Addresses" FromRole="Firms" ToRole="Addresses" />
+    <NavigationProperty Name="Addresses1" Relationship="Self.FK_Firms_Addresses1" FromRole="Firms" ToRole="Addresses" />
+    <NavigationProperty Name="Directors" Relationship="Self.FK_Firms_Directors" FromRole="Firms" ToRole="Directors" />
+    <NavigationProperty Name="Providers" Relationship="Self.FirmsAndProviders" FromRole="Firms" ToRole="Providers" />
+  </EntityType>
+  <EntityType Name="Providers">
+    <Key>
+      <PropertyRef Name="IdProvider" />
+    </Key>
+    <Property Name="IdProvider" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TitleProvider" Type="String" MaxLength="180" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="IdAddressProviderLegal" Type="Int32" />
+    <Property Name="IdAddressProviderActual" Type="Int32" />
+    <Property Name="IdDirector" Type="Int32" />
+    <Property Name="IdAddressStore" Type="Int32" />
+    <NavigationProperty Name="Addresses" Relationship="Self.FK_Providers_Addresses" FromRole="Providers" ToRole="Addresses" />
+    <NavigationProperty Name="Addresses1" Relationship="Self.FK_Providers_Addresses1" FromRole="Providers" ToRole="Addresses" />
+    <NavigationProperty Name="Addresses2" Relationship="Self.FK_Providers_Addresses2" FromRole="Providers" ToRole="Addresses" />
+    <NavigationProperty Name="Directors" Relationship="Self.FK_Providers_Directors" FromRole="Providers" ToRole="Directors" />
+    <NavigationProperty Name="Firms" Relationship="Self.FirmsAndProviders" FromRole="Providers" ToRole="Firms" />
+    <NavigationProperty Name="Contracts" Relationship="Self.ProvidersAndContracts" FromRole="Providers" ToRole="Contracts" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="IdUser" />
+    </Key>
+    <Property Name="IdUser" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Login" Type="String" MaxLength="70" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Password" Type="String" MaxLength="40" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="UserType" Type="String" MaxLength="40" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Surname" Type="String" MaxLength="90" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="90" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="SecondName" Type="String" MaxLength="90" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <Association Name="FK_Addresses_addressTypes">
+    <End Role="addressTypes" Type="Self.addressTypes" Multiplicity="1" />
+    <End Role="Addresses" Type="Self.Addresses" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="addressTypes">
+        <PropertyRef Name="addressTypeId" />
+      </Principal>
+      <Dependent Role="Addresses">
+        <PropertyRef Name="AddressType" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Firms_Addresses">
+    <End Role="Addresses" Type="Self.Addresses" Multiplicity="0..1" />
+    <End Role="Firms" Type="Self.Firms" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Addresses">
+        <PropertyRef Name="IdAddress" />
+      </Principal>
+      <Dependent Role="Firms">
+        <PropertyRef Name="IdAddressLegal" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Firms_Addresses1">
+    <End Role="Addresses" Type="Self.Addresses" Multiplicity="0..1" />
+    <End Role="Firms" Type="Self.Firms" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Addresses">
+        <PropertyRef Name="IdAddress" />
+      </Principal>
+      <Dependent Role="Firms">
+        <PropertyRef Name="IdAddressActual" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Providers_Addresses">
+    <End Role="Addresses" Type="Self.Addresses" Multiplicity="0..1" />
+    <End Role="Providers" Type="Self.Providers" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Addresses">
+        <PropertyRef Name="IdAddress" />
+      </Principal>
+      <Dependent Role="Providers">
+        <PropertyRef Name="IdAddressProviderLegal" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Providers_Addresses1">
+    <End Role="Addresses" Type="Self.Addresses" Multiplicity="0..1" />
+    <End Role="Providers" Type="Self.Providers" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Addresses">
+        <PropertyRef Name="IdAddress" />
+      </Principal>
+      <Dependent Role="Providers">
+        <PropertyRef Name="IdAddressProviderActual" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Providers_Addresses2">
+    <End Role="Addresses" Type="Self.Addresses" Multiplicity="0..1" />
+    <End Role="Providers" Type="Self.Providers" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Addresses">
+        <PropertyRef Name="IdAddress" />
+      </Principal>
+      <Dependent Role="Providers">
+        <PropertyRef Name="IdAddressStore" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Firms_Directors">
+    <End Role="Directors" Type="Self.Directors" Multiplicity="0..1" />
+    <End Role="Firms" Type="Self.Firms" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Directors">
+        <PropertyRef Name="IdDirector" />
+      </Principal>
+      <Dependent Role="Firms">
+        <PropertyRef Name="IdDirector" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Providers_Directors">
+    <End Role="Directors" Type="Self.Directors" Multiplicity="0..1" />
+    <End Role="Providers" Type="Self.Providers" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Directors">
+        <PropertyRef Name="IdDirector" />
+      </Principal>
+      <Dependent Role="Providers">
+        <PropertyRef Name="IdDirector" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ContractAndDocument">
+    <End Role="Contracts" Type="Self.Contracts" Multiplicity="*" />
+    <End Role="Documents" Type="Self.Documents" Multiplicity="*" />
+  </Association>
+  <Association Name="DocumentsAndTitle">
+    <End Role="Documents" Type="Self.Documents" Multiplicity="*" />
+    <End Role="DocumentTitle" Type="Self.DocumentTitle" Multiplicity="*" />
+  </Association>
+  <Association Name="FirmsAndProviders">
+    <End Role="Firms" Type="Self.Firms" Multiplicity="*" />
+    <End Role="Providers" Type="Self.Providers" Multiplicity="*" />
+  </Association>
+  <Association Name="ProvidersAndContracts">
+    <End Role="Contracts" Type="Self.Contracts" Multiplicity="*" />
+    <End Role="Providers" Type="Self.Providers" Multiplicity="*" />
+  </Association>
+  <EntityContainer Name="DB_DocumentsEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Addresses" EntityType="Self.Addresses" />
+    <EntitySet Name="addressTypes" EntityType="Self.addressTypes" />
+    <EntitySet Name="Contracts" EntityType="Self.Contracts" />
+    <EntitySet Name="Directors" EntityType="Self.Directors" />
+    <EntitySet Name="Documents" EntityType="Self.Documents" />
+    <EntitySet Name="DocumentTitle" EntityType="Self.DocumentTitle" />
+    <EntitySet Name="Firms" EntityType="Self.Firms" />
+    <EntitySet Name="Providers" EntityType="Self.Providers" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
+    <EntitySet Name="User" EntityType="Self.User" />
+    <AssociationSet Name="FK_Addresses_addressTypes" Association="Self.FK_Addresses_addressTypes">
+      <End Role="addressTypes" EntitySet="addressTypes" />
+      <End Role="Addresses" EntitySet="Addresses" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Firms_Addresses" Association="Self.FK_Firms_Addresses">
+      <End Role="Addresses" EntitySet="Addresses" />
+      <End Role="Firms" EntitySet="Firms" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Firms_Addresses1" Association="Self.FK_Firms_Addresses1">
+      <End Role="Addresses" EntitySet="Addresses" />
+      <End Role="Firms" EntitySet="Firms" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Providers_Addresses" Association="Self.FK_Providers_Addresses">
+      <End Role="Addresses" EntitySet="Addresses" />
+      <End Role="Providers" EntitySet="Providers" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Providers_Addresses1" Association="Self.FK_Providers_Addresses1">
+      <End Role="Addresses" EntitySet="Addresses" />
+      <End Role="Providers" EntitySet="Providers" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Providers_Addresses2" Association="Self.FK_Providers_Addresses2">
+      <End Role="Addresses" EntitySet="Addresses" />
+      <End Role="Providers" EntitySet="Providers" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Firms_Directors" Association="Self.FK_Firms_Directors">
+      <End Role="Directors" EntitySet="Directors" />
+      <End Role="Firms" EntitySet="Firms" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Providers_Directors" Association="Self.FK_Providers_Directors">
+      <End Role="Directors" EntitySet="Directors" />
+      <End Role="Providers" EntitySet="Providers" />
+    </AssociationSet>
+    <AssociationSet Name="ContractAndDocument" Association="Self.ContractAndDocument">
+      <End Role="Contracts" EntitySet="Contracts" />
+      <End Role="Documents" EntitySet="Documents" />
+    </AssociationSet>
+    <AssociationSet Name="DocumentsAndTitle" Association="Self.DocumentsAndTitle">
+      <End Role="Documents" EntitySet="Documents" />
+      <End Role="DocumentTitle" EntitySet="DocumentTitle" />
+    </AssociationSet>
+    <AssociationSet Name="FirmsAndProviders" Association="Self.FirmsAndProviders">
+      <End Role="Firms" EntitySet="Firms" />
+      <End Role="Providers" EntitySet="Providers" />
+    </AssociationSet>
+    <AssociationSet Name="ProvidersAndContracts" Association="Self.ProvidersAndContracts">
+      <End Role="Contracts" EntitySet="Contracts" />
+      <End Role="Providers" EntitySet="Providers" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
